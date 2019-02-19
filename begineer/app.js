@@ -107,6 +107,7 @@ arr[3](arr[2].name);
 
 
 //function with arguments
+
 function greetWithSpread(...other) { //Here other is spread
 
     if(other.length === 0 ){
@@ -124,6 +125,44 @@ greetWithSpread();
 greetWithSpread('Nikhil');
 greetWithSpread('Nikhil', 'Agrawal');
 greetWithSpread('Nikhil', 'Agrawal', 'Hindi');
+
+
+
+// Syntax Parser can be dangerous
+
+function getPerson() {
+    return {        // putting { opening parenthesis on same line as return
+        firstName: 'Nikhil'
+    }
+}
+
+console.log(getPerson());
+
+
+
+//Js is very liberal with whitespaces providing programmers with lot of flexibility
+var
+
+    // first name
+    firstname,
+
+    // last name
+    lastname,
+
+    //phone number
+    phoneNumber,
+
+    // SSN (required)
+    ssn;
+
+var person = {
+    // first Name
+    firstname: 'Nikhil',
+
+    //SSN (always required)
+    ssn: 123456
+};
+
 
 
 
